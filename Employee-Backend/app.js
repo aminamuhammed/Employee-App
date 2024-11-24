@@ -21,7 +21,6 @@ app.get('/test', (req, res) => {
 app.use('/user', useRoutes);
 app.use('/emp', empRoutes);
 
-app.get('/*', function(req,res) {res.sendFile(path.join(__dirname ,'/build/index.html')); });
 // Global Error Handling Middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
