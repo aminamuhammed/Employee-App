@@ -8,9 +8,8 @@ const empRoutes = require('./routes/employeeRoute');
 
 const app = express();
 
-//for deployment
-const path = require('path')
-app.use(express.static(path.join(__dirname,'/build')))
+
+
 
 // Middleware
 app.use(cors());
@@ -31,8 +30,6 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'Internal server error' });
 });
 
-
-app.get('/*',function(req,res){res.sendFile(path.join(__dirname,'/build/index.html')); });
 
 // Start the server
 app.listen(process.env.PORT, () => {
