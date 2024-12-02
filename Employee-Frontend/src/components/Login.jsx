@@ -16,7 +16,7 @@ const Login = () => {
   };
 
   
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = import.meta.env.VITE_BLOGGER_API || 'http://localhost:5000';
   
   
   const handleSubmit = async (e) => {
